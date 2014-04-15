@@ -1,0 +1,26 @@
+﻿<form class="form-horizontal">
+    <fieldset>
+        <legend>Campaign</legend>
+        <div class="form-group">
+            <label class="col-lg-1 col-md-1 control-label" for="selectCampaign">Campaign</label>
+            <div class="col-lg-3">
+                <select id="selectCampaign" ng-model="campaign" ng-options="c.Name for c in Campaigns" class="form-control"></select>
+            </div>
+            <div class="col-lg-2">
+                <button class="btn btn-primary" type="button" ng-click="toggleAddCampaign()">+</button>
+            </div>
+        </div>
+        <div class="form-group" ng-show="showAddCampaign">
+            <label class="col-lg-1 control-label" for="selectCampaign">Name</label>
+            <div class="col-lg-2">
+                <input type="text" ng-model="newCampaignName" class="form-control" />
+            </div>
+            <div class="col-lg-2">
+                <button class="btn btn-primary" type="button" ng-click="addCampaign()" ng-disabled="newCampaignName == null || newCampaignName.length < 5">Add Campaign</button>
+            </div>
+            <div class="col-lg-1">
+                <button class="btn btn-default" type="button" ng-click="showAddCampaign = false">X</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,20 @@
+﻿.vertical-middle
+{
+    vertical-align:middle;
+}
+
+.text-align-right
+{
+    text-align:right;
+}
+
+.text-align-center
+{
+    text-align:center;
+}
+
+@media (min-width: 768px) {
+  .actor-stats-buffer {
+    padding-bottom:55px;
+  }
+}

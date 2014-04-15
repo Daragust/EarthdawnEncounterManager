@@ -1,0 +1,31 @@
+﻿<div class="bs-component" ng-hide="$parent.campaign == null">
+    <fieldset>
+        <legend>Sessions</legend>
+    </fieldset>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th class="text-align-right">LP Earned</th>
+                <th>&nbsp</th>
+            </tr>
+        </thead>
+        <tbody data-ng-repeat="session in $parent.sessions | orderBy:['-StartDate', '-EndDate'] | filter:{CampaignId: $parent.campaign.Id}">
+            <tr>
+                <td><span class="vertical-middle">{{session.StartDate | date : medium}}</span></td>
+                <td><span class="vertical-middle">{{session.EndDate | date : medium}}</span></td>
+                <td class="text-align-right">
+                    <span class="vertical-middle" ng-hide="session.EndDate == null">{{session.LegendPoints}}</span>
+                    <input type="text" numbers-only="numbers-only" ng-model="session.LegendPoints" ng-show="session.EndDate == null" />
+                </td>
+                <td class="text-align-center">
+                    <button class="btn btn-primary btn-sm" type="button" ng-click="endSession(session)" ng-show="session.EndDate == null" ng-disabled="session.LegendPoints == null || session.LegendPoints < 50">End Session</button>
+                    <button class="btn btn-primary btn-sm" type="button" ng-click="copySession(session)" ng-hide="session.EndDate == null">Copy From Session</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <button class="btn btn-primary btn-sm pull-right" type="button" ng-click="addSession()">Add New Session</button>
+</div>
