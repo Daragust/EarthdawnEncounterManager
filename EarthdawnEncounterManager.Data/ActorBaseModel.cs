@@ -13,7 +13,7 @@ namespace EarthdawnEncounterManager.Data
 {
     public abstract class ActorBaseModel : EditableItemBase
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string Name { get; set; }
         public int Circle { get; set; }
 

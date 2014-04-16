@@ -14,6 +14,7 @@ namespace EarthdawnEncounterManager.Data
     public class EncounterModel : EditableItemBase
     {
         public int Id { get; set; }
+        public int CampaignId { get; set; }
         public string Name { get; set; }
         public int Order { get; set; }
         public List<EncounterEnemyModel> Enemies { get; set; }

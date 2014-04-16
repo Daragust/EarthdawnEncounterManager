@@ -13,9 +13,9 @@ namespace EarthdawnEncounterManager.Data.Contracts
 {
     public interface IEncounterRepository
     {
-        IList<EncounterModel> GetAllEncounters(int CampaignId);
+        IList<EncounterModel> GetAllEncounters(int campaignId);
 
-        IList<EncounterModel> GetActiveEncounters(int CampaignId);
+        IList<EncounterModel> GetActiveEncounters(int campaignId);
 
         EncounterModel AddEncounter(EncounterModel encounter);
 

@@ -15,5 +15,6 @@ namespace EarthdawnEncounterManager.Data
     {
         public int EnemyId { get; set; }
         public EnemyModel Enemy { get; set; }
+        public int EncounterId { get; set; }
     }
 }

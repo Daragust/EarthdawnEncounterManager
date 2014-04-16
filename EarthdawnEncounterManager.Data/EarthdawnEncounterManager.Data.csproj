@@ -60,6 +60,8 @@
     <Compile Include="CampaignModel.cs" />
     <Compile Include="CampaignRepository.cs" />
     <Compile Include="CharacterModel.cs" />
+    <Compile Include="Contracts\IEncounterEnemyRepository.cs" />
+    <Compile Include="EncounterEnemyRepository.cs" />
     <Compile Include="Contracts\IActorActionRepository.cs" />
     <Compile Include="Contracts\ICampaignRepository.cs" />
     <Compile Include="Contracts\ICharacterRepository.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="EditableItemBase.cs" />
     <Compile Include="EncounterEnemyModel.cs" />
     <Compile Include="EncounterModel.cs" />
+    <Compile Include="EncounterRepository.cs" />
     <Compile Include="EnemyModel.cs" />
     <Compile Include="EnemyRepository.cs" />
     <Compile Include="PlayerRepository.cs" />
